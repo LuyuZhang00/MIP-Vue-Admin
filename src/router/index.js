@@ -56,23 +56,23 @@ export const constantRoutes = [
   },
 
   {
-    path: '/example',
+    path: '/hospSet',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    redirect: '/hospSet/list',
+    name: '医院设置管理',
+    meta: { title: '医院设置管理', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'list',
+        name: '医院设置列表',
+        component: () => import('@/views/hospset/list'),   //@代表src目录
+        meta: { title: '医院设置列', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'add',
+        name: '医院设置添加',
+        component: () => import('@/views/hospset/add'),
+        meta: { title: '医院设置添加', icon: 'tree' }
       }
     ]
   },
