@@ -1,8 +1,10 @@
 <template>
   <section class="app-main">
+
     <transition name="fade-transform" mode="out-in">
       <router-view :key="key" />
     </transition>
+
   </section>
 </template>
 
@@ -10,8 +12,11 @@
 export default {
   name: 'AppMain',
   computed: {
+    // key() {
+    //   return this.$route.path
+    // }
     key() {
-      return this.$route.path
+      returnthis.$route.name !== undefined ? this.$route.name + +newDate() : this.$route + +newDate()
     }
   }
 }
@@ -25,6 +30,7 @@ export default {
   position: relative;
   overflow: hidden;
 }
+
 .fixed-header+.app-main {
   padding-top: 50px;
 }
