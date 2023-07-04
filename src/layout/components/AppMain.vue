@@ -12,12 +12,12 @@
 export default {
   name: 'AppMain',
   computed: {
-    // key() {
-    //   return this.$route.path
-    // }
     key() {
-      returnthis.$route.name !== undefined ? this.$route.name + +newDate() : this.$route + +newDate()
+      return this.$route.path
     }
+    // key() {
+    //   returnthis.$route.name !== undefined ? this.$route.name + +newDate() : this.$route + +newDate()
+    // }
   }
 }
 </script>
