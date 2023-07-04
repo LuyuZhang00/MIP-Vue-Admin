@@ -86,26 +86,38 @@ npm run lint
 npm run lint -- --fix
 ```
 
+
+
+## 遇到的问题
+
+1.添加nginx代理，使医院管理用8201端口，数据管理用82.2端口时，前端在[.env.development](.env.development)配置路由 ```http://localhost:9001  ``` 不用添加引号，非常神奇 
+
+加引号
+![Alt text](imgs/image.png)
+
+
+去掉引号
+![Alt text](imgs/image_ny.png)
+
+
+
+
+
+
+
+
+
+
+学习参考文档
+
+[vue-admin-template去除mock等开箱设置](https://juejin.cn/post/6844904145887952910)
+
+[基于vue-admin-template开发后台管理项目,环境搭建流程](https://juejin.cn/post/7109672224822886407)
+
+
+---------
 更多信息请参考 [使用文档](https://panjiachen.github.io/vue-element-admin-site/zh/)
-
-## 购买贴纸
-
-你也可以通过 购买[官方授权的贴纸](https://smallsticker.com/product/vue-element-admin) 的方式来支持 vue-element-admin - 每售出一张贴纸，我们将获得 2 元的捐赠。
-
-## Demo
-
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
-
-## Browsers support
-
-Modern browsers and Internet Explorer 10+.
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-| IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
-
-## License
 
 [MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
 
-Copyright (c) 2017-present PanJiaChen
+
