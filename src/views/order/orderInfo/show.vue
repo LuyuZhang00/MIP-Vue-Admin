@@ -90,7 +90,7 @@
 </template>
 <script>
 // 引入组件
-import orderInfoApi from '@/api/order/orderInfo'
+import orderInfoApi from '@/api/orderInfo'
 export default {
   data() {
     return {

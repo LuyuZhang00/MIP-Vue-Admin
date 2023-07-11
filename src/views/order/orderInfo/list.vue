@@ -61,7 +61,7 @@
   </div>
 </template>
 <script>
-import orderInfoApi from '@/api/order/orderInfo'
+import orderInfoApi from '@/api/orderInfo'
 export default {
   data() {
     return {
@@ -70,7 +70,8 @@ export default {
       total: 0, // 数据库中的总记录数
       page: 1, // 默认页码
       limit: 10, // 每页记录数
-      searchObj: {} // 查询表单对象
+      searchObj: {}, // 查询表单对象
+      statusList: [], // 初始化为一个空数组，或者你需要的初始值
     }
   },
   // 生命周期函数：内存准备完毕，页面尚未渲染
@@ -90,8 +91,7 @@ export default {
       console.log('翻页。。。' + page)
       // 异步获取远程数据（ajax）
       this.page = page
-      orderInfoApi.getPageList(this.page, this.limit, this.searchObj).t
-      hen(
+      orderInfoApi.getPageList(this.page, this.limit, this.searchObj).then(
         response => {
           debugger
           this.list = response.data.records
